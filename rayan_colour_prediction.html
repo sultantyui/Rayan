@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RAYAN - Colour Prediction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: #fff;
+            text-align: center;
+        }
+        header {
+            background: #222;
+            padding: 1em;
+            font-size: 1.5em;
+        }
+        .container {
+            padding: 2em;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 1em;
+            border: none;
+            border-radius: 5px;
+            background-color: #00c853;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #00e676;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>RAYAN Colour Prediction</header>
+    <div class="container">
+        <p>Welcome to the RAYAN Colour Prediction Game.</p>
+        <p>Game Time: <strong>1 Minute</strong></p>
+        <p>Colors: Red | Green | Violet</p>
+        <button onclick="addMoney()">Add Money (UPI)</button>
+        <button onclick="checkWallet()">Check Wallet</button>
+        <button onclick="playGame()">Play Game</button>
+        <button onclick="showAdmin()">Admin Panel</button>
+        <div id="adminPanel" class="hidden">
+            <h3>Manual Result Control</h3>
+            <button onclick="setResult('Red')">Set Red</button>
+            <button onclick="setResult('Green')">Set Green</button>
+            <button onclick="setResult('Violet')">Set Violet</button>
+        </div>
+    </div>
+
+    <script>
+        function addMoney() {
+            alert("Use UPI ID: mdsultantyui-2@oksbi to add money.");
+        }
+        function checkWallet() {
+            alert("Wallet Balance: ₹0 (Demo)");
+        }
+        function playGame() {
+            alert("Game Started! Predict your colour now.");
+        }
+        function showAdmin() {
+            let panel = document.getElementById('adminPanel');
+            panel.classList.toggle('hidden');
+        }
+        function setResult(color) {
+            alert("Next result set to: " + color + " (Manual)");
+        }
+    </script>
+</body>
+</html>
